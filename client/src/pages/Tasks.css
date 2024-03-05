@@ -1,0 +1,15 @@
+.head-text{
+    font-size: 48px;
+    font-weight: 700;
+    color: #FCD8B8;
+    margin: 100px 0px 145px 0px;
+}
+
+.around-tasks{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 45px;
+    width: 100%;
+}
+

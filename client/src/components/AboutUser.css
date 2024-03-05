@@ -1,0 +1,113 @@
+.about{
+    background: #FCD8B8;
+    border: none;
+    border-radius: 20px;
+    padding: 35px 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    width: -webkit-fill-available;
+}
+
+.about>h1{
+    color: #9F7854;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#edit:hover{
+    cursor: pointer;
+}
+
+.about-user-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.title{
+    color: #412828;
+    font-size: 32px;
+}
+
+.info{
+    color: #9F7854;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.about-user-text>input{
+    background: none;
+    border: 3px solid #9F7854;
+    border-radius: 20px;
+    font-size: 32px;
+    color: #9F7854;
+    font-weight: 400;
+    padding: 18px 0px 18px 17px;
+}
+
+.buttons{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    align-self: center;
+}
+
+.save, .cancel{
+    border: none;
+    border-radius: 20px;
+    padding: 18px 39px;
+    color: white;
+    font-size: 32px;
+}
+
+.save{
+    background: #9F7854;
+}
+
+.cancel{
+    background: rgba(159, 120, 84, 0.69);
+}
+
+@media screen and (max-width: 1200px) {   
+    .about{
+        padding: 35px 37px;
+    }
+    
+    .about>h1{
+        font-size: 30px;
+    }
+    
+    #edit{
+        width: 45px;
+    }
+    
+    .title{
+        font-size: 24px;
+    }
+    
+    .info{
+        font-size: 24px;
+    }
+    
+    .about-user-text>input{
+        font-size: 17px;
+        padding: 10px 0px 10px 10px;
+    }
+    
+    .buttons{
+        gap: 20px;
+    }
+    
+    .save, .cancel{
+        padding: 12px 19px;
+        color: white;
+        font-size: 24px;
+    }
+}

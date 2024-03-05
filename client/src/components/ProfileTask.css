@@ -1,0 +1,92 @@
+.user-tasks{
+    background: #9F7854;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 35px;
+    padding: 40px 20px;
+}
+
+.user-tasks-title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-tasks-title>p>img{
+    margin-right: 11px;
+}
+
+.user-tasks-title>p{
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.task-info{
+    font-size: 28px;
+    color: white;
+}
+
+.task-with{
+    display: flex;
+    gap: 16px;
+}
+
+.with{
+    color: white;
+    font-size: 28px;
+}
+
+.number{
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.done{
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 19px 34px;
+    color: #9F7854;
+    font-size: 32px;
+    align-self: center;
+}
+
+@media screen and (max-width: 1200px) {   
+    .user-tasks-title>p>img{
+        width: 30px;
+    }
+    
+    .user-tasks-title>p{
+        font-size: 17px;
+    }
+    
+    .task-info{
+        font-size: 17px;
+    }
+    
+    .task-with{
+        gap: 10px;
+    }
+    
+    .with{
+        font-size: 17px;
+    }
+    
+    .number{
+        font-size: 17px;
+    }
+    
+    .done{
+        padding: 12px 24px;
+        font-size: 24px;
+    }
+}

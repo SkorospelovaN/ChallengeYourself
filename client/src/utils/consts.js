@@ -1,0 +1,8 @@
+export const MAIN_ROUTE='/'
+export const AUTH_ROUTE='/auth'
+export const PROFILE_ROUTE='/profile'
+export const TASK_ROUTE='/task'
+export const ADDTASK_ROUTE='/addtask'
+export const USER_TASKS = '/profile/taskprofile'
+export const IN_TASKS = '/profile/intaskprofile'
+export const ADMIN_ROUTE='/admintasks'

@@ -1,0 +1,75 @@
+.auth-form, .auth-form-log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 62px;
+    gap: 35px;
+    background: #FCD8B8;
+    border: none;
+    border-radius: 20px;
+    width: 40%;
+}
+
+.auth-form{
+    margin: 106px 0px 0px 0px;
+}
+
+.auth-form-log{
+    margin: 217px 0px 0px 0px;
+}
+
+.auth-form>h1, .auth-form-log>h1{
+    font-size: 48px;
+    font-weight: 700;
+    color: #9F7854;
+}
+
+.auth-form>input, .auth-form-log>input{
+    background: none;
+    border: 3px solid #9F7854;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #9F7854;
+    padding: 23px 0px 23px 22px;
+    width: 100%;
+}
+
+.auth-form>input::placeholder, .auth-form-log>input::placeholder{
+    color: rgba(159, 120, 84, 0.9);
+}
+
+.auth-form>button, .auth-form-log>button{
+    background: #9F7854;
+    border: none;
+    border-radius: 20px;
+    padding: 19px 75px;
+    font-size: 32px;
+    color: white;
+}
+
+.links{
+    display: flex;
+    gap: 5px;
+    margin: 35px 0px 0px 0px;
+}
+
+.links>p{
+    color: white;
+    font-size: 24px;
+}
+
+.links>a{
+    color: #FCD8B8;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+    .auth-form, .auth-form-log{
+        width: 60%;
+    }
+
+    .auth-form>button{
+        padding: 19px 35px;
+    }
+  }

@@ -1,0 +1,49 @@
+.add-task{
+    background: #FCD8B8;
+    border: none;
+    border-radius: 20px;
+    padding: 32px 57px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 163px;
+}
+
+.add-task>h1{
+    color: #9F7854;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.add-task>input{
+    background: none;
+    border: 3px solid #9F7854;
+    border-radius: 20px;
+    padding: 23px 0px 23px 25px;
+    font-size: 24px;
+    color: #9F7854;
+    width: -webkit-fill-available;
+}
+
+.add-task>input::placeholder{
+    color: rgba(159, 120, 84, 0.9);
+    font-size: 24px;
+}
+
+.add-task>button{
+    background: #9F7854;
+    border: none;
+    border-radius: 20px;
+    padding: 18px 39px;
+    color: white;
+    font-size: 32px;
+}
+
+@media screen and (max-width: 1200px){
+    .add-task{
+        width: 60%;
+    }
+}

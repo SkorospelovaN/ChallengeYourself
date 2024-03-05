@@ -1,0 +1,38 @@
+.profile-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    background: #FCD8B8;
+    padding: 35px 45px;
+    border: none;
+    border-radius: 20px;
+    width: -webkit-fill-available;
+}
+
+.non-active-link{
+    color: #9F7854;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.active-link{
+    color: #412828;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {   
+    .profile-menu{
+        padding: 35px 25px;
+    }
+
+    .non-active-link{
+        font-size: 20px;
+    }
+    
+    .active-link{
+        font-size: 20px;
+    }
+}
