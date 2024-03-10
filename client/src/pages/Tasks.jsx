@@ -8,8 +8,6 @@ const Tasks = () => {
     <h1 className='head-text'>Доступные цели</h1>
     <div className='around-tasks'>
       <OneTask />
-      <OneTask />
-      <OneTask />
     </div>
     </>
   )

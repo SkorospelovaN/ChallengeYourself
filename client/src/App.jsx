@@ -41,6 +41,14 @@ const router = createBrowserRouter([
         {
             path: ADMIN_ROUTE,
             element: <Navigate to={MAIN_ROUTE} />
+        },
+        {
+            path: USER_TASKS,
+            element: <Navigate to={MAIN_ROUTE} />
+        },
+        {
+            path: IN_TASKS,
+            element: <Navigate to={MAIN_ROUTE} />
         }
       ]
   }

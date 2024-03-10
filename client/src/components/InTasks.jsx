@@ -5,7 +5,7 @@ const InTasks = () => {
   return (
     <>
     <div className='about'>
-      <h1>Созданные цели</h1>
+      <h1>Участие в целях</h1>
       <ProfileTask />
     </div>
     </>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './AddTask.css'
-import { taskSlice, taskThunk } from '../redux/taskSlice'
+import { taskThunk } from '../redux/taskSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 const AddTask = () => {

@@ -2,9 +2,10 @@ import express from "express";
 import { sql } from "./db.js";
 import { register } from "./controllers/register.js";
 import { auth } from "./controllers/auth.js";
-import { roleMiddleware } from "./middlewares/roleMiddleware.js";
 import cors from 'cors'
 import { addtask } from "./controllers/addtask.js";
+import { updatetask } from "./controllers/updatetask.js";
+import { deletetask } from "./controllers/deletetask.js";
 
 const PORT = 5000
 
@@ -13,23 +14,27 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get('/', roleMiddleware(["ADMIN"]), async (req, res) => {
+app.get('/gettask',  async (req, res) => {
+    const data = await sql`select * from Tasks`
+    res.send(data)
+})
+
+app.get('/getuser',  async (req, res) => {
     const data = await sql`select * from Users`
     res.send(data)
 })
 
-app.get('/usertasks', async (req, res) => {
-    const { user_id } = req.body 
-    const user = await sql`select * from Users where user_id == ${user_id}`
-    const data = await sql`select * from Tasks where user_id == ${user}`
-    res.send(data)
-})
+
+app.post('/updatestatus', updatetask)
+
 
 app.post('/reg', register)
 
 app.post('/auth', auth)
 
 app.post('/addnew', addtask)
+
+app.post('/deletetask', deletetask)
 
 const start = async () => {
     
