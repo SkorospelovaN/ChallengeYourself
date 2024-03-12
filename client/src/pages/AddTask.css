@@ -42,6 +42,10 @@
     font-size: 32px;
 }
 
+.add-task>button:hover{
+    background: #412828;
+}
+
 @media screen and (max-width: 1200px){
     .add-task{
         width: 60%;

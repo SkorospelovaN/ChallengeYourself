@@ -34,6 +34,10 @@
     color: #FCD8B8;
 }
 
+.menu-a:hover{
+    font-weight: 600;
+}
+
 .active-a{
     font-size: 24px;
     color: #FCD8B8;
@@ -48,6 +52,11 @@
     font-size: 32px;
     font-weight: 400;
     padding: 19px 73px;
+}
+
+.admin-exit:hover{
+    background: #FCD8B8;
+    color: #9F7854;
 }
 
 @media screen and (max-width: 1050px) {

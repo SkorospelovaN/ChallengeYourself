@@ -53,6 +53,10 @@
     align-self: center;
 }
 
+.task>button:hover{
+    background: #412828;
+}
+
 .accept, .decline{
     border: none;
     border-radius: 20px;
@@ -65,6 +69,14 @@
     background: #839F54;
 }
 
+.accept:hover{
+    background: #445a49;
+}
+
 .decline{
     background: #9F5454;
+}
+
+.decline:hover{
+    background: #552929;
 }

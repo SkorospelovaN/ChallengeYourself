@@ -71,9 +71,14 @@
     background: #9F7854;
 }
 
+.save:hover, .cancel:hover{
+    background: #412828;
+}
+
 .cancel{
     background: rgba(159, 120, 84, 0.69);
 }
+
 
 @media screen and (max-width: 1200px) {   
     .about{

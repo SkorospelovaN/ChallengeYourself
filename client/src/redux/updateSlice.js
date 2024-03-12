@@ -83,4 +83,30 @@ export const deleteThunk = createAsyncThunk("deleteThunk", async (data, { reject
     }
 })
 
+export const finishThunk = createAsyncThunk("finishThunk", async (data, { rejectWithValue }) => {
+    const { id } = data
+
+    try {
+        const result = await fetch('http://localhost:5000/finishtask', {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        })
+        const json = await result.json()
+        if (result.status === 400) {
+            return rejectWithValue(json)
+        }
+        window.location.reload();
+        return json
+        
+        
+    } catch (error) {
+        console.log(error);
+        return rejectWithValue(error.message)
+    }
+})
+
 export default updateSlice.reducer

@@ -8,6 +8,7 @@ const initialState = {
     fio: localStorage.getItem("fio"),
     login: localStorage.getItem("login"),
     phone: localStorage.getItem("phone"),
+    done: localStorage.getItem("done"),
     error: undefined
 }
 
@@ -24,6 +25,7 @@ export const authSlice = createSlice({
             state.phone = undefined
             state.role = undefined
             state.token = undefined
+            state.done = undefined
 
             localStorage.removeItem("token")
             localStorage.removeItem("fio")
@@ -31,6 +33,7 @@ export const authSlice = createSlice({
             localStorage.removeItem("phone")
             localStorage.removeItem("role")
             localStorage.removeItem("id")
+            localStorage.removeItem("done")
         }
     },
     extraReducers: (builder) => {
@@ -45,6 +48,7 @@ export const authSlice = createSlice({
             state.phone = payload.user.phone
             state.role = payload.user.role
             state.id = payload.user.id
+            state.done = payload.user.done
 
             localStorage.setItem("token", payload.token)
             localStorage.setItem("fio", payload.user.fio)
@@ -52,6 +56,7 @@ export const authSlice = createSlice({
             localStorage.setItem("phone", payload.user.phone)
             localStorage.setItem("role", payload.user.role)
             localStorage.setItem("id", payload.user.id)
+            localStorage.setItem("done", payload.user.done)
 
             state.error = undefined
             state.loading = false
@@ -82,6 +87,32 @@ export const loginThunk = createAsyncThunk("logThunk", async (data, { rejectWith
             return rejectWithValue(json)
         }
         return json
+        
+    } catch (error) {
+        console.log(error);
+        return rejectWithValue(error.message)
+    }
+})
+
+export const updateuserThunk = createAsyncThunk("updateuserThunk", async (data, { rejectWithValue }) => {
+    const { id } = data
+
+    try {
+        const result = await fetch('http://localhost:5000/updateuser', {
+            method: 'POST',
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        })
+        const json = await result.json()
+        if (result.status === 400) {
+            return rejectWithValue(json)
+        }
+        window.location.reload();
+        return json
+        
         
     } catch (error) {
         console.log(error);

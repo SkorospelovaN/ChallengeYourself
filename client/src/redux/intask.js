@@ -6,8 +6,8 @@ const initialState = {
     error: undefined
 }
 
-export const taskSlice = createSlice({
-    name: 'task',
+export const intaskSlice = createSlice({
+    name: 'intask',
     initialState,
     reducers: {
         reset: (state, action) => {
@@ -17,16 +17,16 @@ export const taskSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(taskThunk.pending, (state, action) => {
+        builder.addCase(intaskThunk.pending, (state, action) => {
             state.loading = true
         })
-        builder.addCase(taskThunk.fulfilled, (state, action) => {
+        builder.addCase(intaskThunk.fulfilled, (state, action) => {
             const payload = action.payload
 
             state.message = payload.message
             state.loading = false
         })
-        builder.addCase(taskThunk.rejected, (state, action) => {
+        builder.addCase(intaskThunk.rejected, (state, action) => {
             const payload = action.payload
 
             state.error = payload
@@ -35,9 +35,9 @@ export const taskSlice = createSlice({
     }
 })
 
-export const taskThunk = createAsyncThunk("taskThunk", async (data, { rejectWithValue }) => {
+export const intaskThunk = createAsyncThunk("intaskThunk", async (data, { rejectWithValue }) => {
     try {
-        const result = await fetch('http://localhost:5000/addnew', {
+        const result = await fetch('http://localhost:5000/intask', {
             method: 'POST',
             mode: "cors",
             headers: {
@@ -57,6 +57,6 @@ export const taskThunk = createAsyncThunk("taskThunk", async (data, { rejectWith
     }
 })
 
-export const { reset } = taskSlice.actions
+export const { reset } = intaskSlice.actions
 
-export default taskSlice.reducer
+export default intaskSlice.reducer

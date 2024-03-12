@@ -48,6 +48,10 @@
     color: white;
 }
 
+.auth-form>button:hover, .auth-form-log>button:hover{
+    background: #412828;
+}
+
 .links{
     display: flex;
     gap: 5px;
@@ -62,6 +66,10 @@
 .links>a{
     color: #FCD8B8;
     font-size: 24px;
+}
+
+.links>a:hover{
+    color: #9F7854;
 }
 
 @media screen and (max-width: 1200px) {

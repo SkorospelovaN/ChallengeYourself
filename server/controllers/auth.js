@@ -19,9 +19,12 @@ export const auth = async (req, res) => {
     }
     //если все ок то генерируем токен
     const token = generateAccessToken(user[0].id, user[0].role)
+
+    console.log(user[0])
     //и возвращаем пользователю токен и его данные из базы
     return res.json({
         token: token,
         user: user[0]
     })
+
 }

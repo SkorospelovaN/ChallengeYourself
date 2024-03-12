@@ -17,6 +17,10 @@
     font-weight: 700;
 }
 
+.non-active-link:hover{
+    color: #412828;
+}
+
 .active-link{
     color: #412828;
     font-size: 32px;

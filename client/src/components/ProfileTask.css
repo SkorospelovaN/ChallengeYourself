@@ -61,6 +61,11 @@
     align-self: center;
 }
 
+.done:hover{
+    background: #412828;
+    color: white;
+}
+
 @media screen and (max-width: 1200px) {   
     .user-tasks-title>p>img{
         width: 30px;

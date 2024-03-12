@@ -24,6 +24,11 @@
     margin-top: 49px;
 }
 
+.exit:hover{
+    background: #FCD8B8;
+    color: #9F7854;
+}
+
 @media screen and (max-width: 1200px) {
     .exit{
         padding: 19px 43px;
